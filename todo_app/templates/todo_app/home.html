@@ -3,9 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Todo App</title>
 </head>
 <body>
-    This is home page.
+    <div class="container">
+        <div class="col-md-12">
+            <center><h2>Welcome to Todo App</h2></center>
+        </div>
+        <div class="col-md-12">
+            <table class="table">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col">Task ID</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Priority</th>
+                    <th scope="col">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    {% for task in tasks%}        
+                    <tr>
+                        <th scope="row">{{task.id}}</th>
+                        <td>{{task.name}}</td>
+                        <td>{{task.priority}}</td>
+                        <td><button type="submit" class="btn btn-outline-primary">Complete</button></td>
+                    </tr>
+                {% endfor%}
+                </tbody>
+              </table>
+        </div>
+    </div>
 </body>
 </html>
