@@ -1,4 +1,4 @@
-# Math Flashcards Project
+# Simply Todo App
 
 A simple Todo app to track of your daily todo list by simply allowing you to add or complete the tasks.
 
