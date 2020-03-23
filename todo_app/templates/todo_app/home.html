@@ -10,18 +10,21 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <center><h2>Welcome to Simple Todo App</h2></center>
+                <center>
+                    <h2>Welcome to Simple Todo App</h2> 
+                    <small>built with <span style="color: #e25555;">&#9829;</span> by Phone Thiri Yadana</small>
+                </center>
             </div>
         </div>
         <br>
         <form class="row" method="POST" action="{% url 'addtask' %}">
             {% csrf_token %}
             <div class="col">
-                <label for="name">Task Name</label>
+                <label for="name" style="font-weight: bold;">Task Name</label>
                 <input type="name" class="form-control" id="name" name="name" placeholder="Enter your task name" autofocus>
             </div>
             <div class="col">
-                <label for="priority">Task Priority</label>
+                <label for="priority" style="font-weight: bold;">Task Priority</label>
                 <select class="form-control" id="priority"  name="priority">
                 <option>1</option>
                 <option>2</option>
@@ -42,7 +45,7 @@
         </div><br>
         <div class="row">
             <div class="col-md-12">
-                <table class="table">
+                <table class="table table-striped">
                     <thead class="thead-dark">
                       <tr>
                         <th scope="col">Task ID</th>
