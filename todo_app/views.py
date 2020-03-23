@@ -16,17 +16,22 @@ def home(request,id=None):
 def add_task(request):
     """add new task"""
     if request.method == "POST":
-        name = request.POST.get('name','')
-        priority = request.POST.get('priority','')
 
-        task = Task(name=name,priority=priority)
-        task.save()
+        #check whether name is empty or not
+        if request.POST.get('name') != '':
+            name = request.POST.get('name')
+            priority = request.POST.get('priority')
 
-        #return to home page
-        return redirect('/')
+            task = Task(name=name,priority=priority)
+            task.save()
 
-    return render(request,'todo_app/add_task.html',{})
-
+            #return to home page
+            return redirect('/')
+        else:
+            #if empty, show error message and load all the list again.
+            msg = 'Please enter the task name.'
+            tasks = Task.objects.all()
+            return render(request,'todo_app/home.html',{'msg':msg, 'tasks':tasks})
 
 def complete_task(id):
     """mark as complete for task and delete it"""
