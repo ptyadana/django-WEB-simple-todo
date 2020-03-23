@@ -8,4 +8,4 @@ A simple Todo app to track of your daily todo list by simply allowing you to add
 
 [Visit Simply Todo App on heroku](https://simply-todo-app-by-ptyadana.herokuapp.com/)
 
-![Math Flashcards](https://raw.githubusercontent.com/ptyadana/django-WEB-simple-todo/master/simple-todo-app)
+![Simple todo](https://raw.githubusercontent.com/ptyadana/django-WEB-simple-todo/master/simple-todo-app.png)
